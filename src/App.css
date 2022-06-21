@@ -1,0 +1,115 @@
+* {
+  list-style: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+.sidebar {
+  background: #191718;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 150px;
+  height: 100%;
+  overflow: auto;
+}
+.sidebar ul li a {
+  display: flex;
+  justify-content: flex-start;
+  padding: 14px 0px 11px 16px;
+  border-bottom: 1px solid #5c5c5c;
+  color: rgb(241, 237, 237);
+  font-size: 16px;
+  position: relative;
+  font-weight: 700;
+}
+.sidebar ul li a:hover {
+  color: #ffffff;
+  background: #5c5c5c;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 20px;
+  overflow: auto;
+  /* text-align: center; */
+}
+.nccLogo {
+  width: 310px;
+  height: 122px;
+  margin-bottom: 30px;
+}
+.title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+  text-align: center;
+  margin-bottom: 18px;
+}
+.main-content {
+  margin-left: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* padding: 0px 129px; */
+}
+.text-view {
+  background-color: #efefef;
+  padding: 38px 38px;
+}
+.text-view p {
+  text-align: center;
+}
+.bottom-content-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+.bottom-content div {
+  display: flex;
+  flex-direction: row;
+}
+.bottom-content h3 {
+  margin-bottom: 18px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+}
+.bottom-content p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+}
+.bottom-content img {
+  width: 128px;
+  height: 128px;
+}
+@media screen and (max-width: 700px) {
+  .App {
+    padding-top: 0px;
+  }
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {
+    float: left;
+  }
+  div .main-content {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
