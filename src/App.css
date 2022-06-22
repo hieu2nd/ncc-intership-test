@@ -32,7 +32,7 @@
 
 .App {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   flex-direction: column;
   padding-top: 20px;
   overflow: auto;
@@ -57,22 +57,24 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* padding: 0px 129px; */
+  padding: 0px 129px;
 }
 .text-view {
   background-color: #efefef;
   padding: 38px 38px;
+  margin-bottom: 40px;
 }
 .text-view p {
   text-align: center;
 }
+.bottom-content {
+  margin-right: 50px;
+}
+.bottom-content:last-child {
+  margin-right: 0px;
+}
 .bottom-content-wrapper {
   display: flex;
-  flex-direction: row;
-}
-.bottom-content div {
-  display: flex;
-  flex-direction: row;
 }
 .bottom-content h3 {
   margin-bottom: 18px;
@@ -89,27 +91,102 @@
   width: 128px;
   height: 128px;
 }
-@media screen and (max-width: 700px) {
-  .App {
-    padding-top: 0px;
+.img-wrapper {
+  float: left;
+}
+.icon-menu {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.icon-menu {
+  display: none;
+}
+.footer-wrapper {
+  margin-left: 150px;
+  padding-left: 129px;
+  padding-top:30px;
+  padding-bottom:30px;
+  border-top: 1px solid #DEDEDE;
+}
+.footer-wrapper h3 {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+}
+@media only screen and (min-width: 1024px) {
+.main-content{
+  height:100vh;
+}
+}
+@media only screen and (min-width: 740px) and (max-width: 1023px) {
+  .main-content {
+    margin-left: 0px;
+    padding: 0px 40px;
+    margin-right: 0px;
   }
-  .sidebar {
-    width: 100%;
-    height: auto;
-    position: relative;
+  .bottom-content-wrapper {
+    display: block;
   }
-  .sidebar a {
-    float: left;
+  .bottom-content {
+    margin-bottom: 30px;
+    margin-right: 0px;
   }
-  div .main-content {
-    margin-left: 0;
-    margin-top: 20px;
+  .icon-menu {
+    display: block;
+  }
+  .footer-wrapper{
+    margin-top: 50px;
+    margin-left: 0px;
+    padding-left: 40px;
   }
 }
 
-@media screen and (max-width: 400px) {
-  .sidebar a {
-    text-align: center;
-    float: none;
+@media screen and (max-width: 739px) {
+  .main-content {
+    margin-left: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 0px;
+  }
+  .nccLogo {
+    width: 155px;
+    height: 61px;
+  }
+  .bottom-content img {
+    width: 64px;
+    height: 64px;
+  }
+  .bottom-content h3 {
+    margin-bottom: 18px;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 28px;
+  }
+  .bottom-content p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+  }
+  .bottom-content-wrapper {
+    display: block;
+  }
+  .bottom-content {
+    margin-bottom: 30px;
+    margin-right: 0px;
+    padding: 0px 10px;
+  }
+  .text-view p {
+    text-align: start;
+  }
+  .icon-menu {
+    display: block;
+  }
+  .footer-wrapper{
+    margin-left: 0px;
+    padding-left: 10px;
   }
 }
